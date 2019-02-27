@@ -1,0 +1,19 @@
+title: Dexerto Media
+url: https://www.dexerto.media
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.babel.js
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - src
+  - tailwind.config.js
+
+collections:
+  - partners
+  - case-studies

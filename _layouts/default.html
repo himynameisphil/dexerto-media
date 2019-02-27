@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dexerto</title>
+<meta name="description" content="description">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+{% for css in page.css %}
+<link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+</head>
+
+<body class="bg-white text-slate font-sans">
+
+<header class="fixed z-30 w-full text-white px-4 pt-16" style="transition: padding .3s linear;">
+  <div class="max-w-2xl mx-auto">
+    <div class="flex items-center">
+      <a href="{{ site.baseurl }}" class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 980 980"><path d="M976 427.1c-24.2-189.4-156.1-345-332.3-403.3C604 10.7 562 2.5 518.5 0v427.1h-57.2V0C417.7 2.5 375.7 10.8 336 23.9v403.2H4c-2.6 20.6-4 41.6-4 62.9 0 21.2 1.3 42.1 4 62.6C28 742 159.9 897.7 336 956.1c39.8 13.2 81.8 21.4 125.3 23.9V552.6h57.2V980c43.5-2.5 85.5-10.7 125.3-23.8 159.3-52.7 282.5-185.1 322.4-350.1H834.3c-17.6 52.6-47.3 100.7-87.5 141.1-30.4 30.4-65.2 54.8-103 72.5v-267H976c2.6-20.5 4-41.4 4-62.6 0-21.4-1.4-42.4-4-63zM643.8 160.3c37.8 17.7 72.6 42.1 103 72.5 53.5 53.6 88.3 121.1 101 194.3h-204V160.3zM336 819.5c-37.7-17.7-72.4-42-102.7-72.4-53.6-53.7-88.4-121.2-101-194.5H336v266.9z"/></svg>
+        <div class="text-sm font-semibold uppercase tracking-wide ml-4">Dexerto</div>
+      </a>
+
+      <div class="flex-auto"></div>
+
+      <button class="flex items-center text-white focus:outline-none">
+        <div class="text-sm font-semibold uppercase tracking-wide mr-4">Menu</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="">{{ content }}</main>
+
+<div class="h-screen"></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/assets/js/global.js" type="text/javascript"></script>
+{% for js in page.js %}
+<script src="{{ js }}" type="text/javascript"></script>
+{% endfor %}
+</body>
+</html>

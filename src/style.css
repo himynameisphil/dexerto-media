@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+       url("../fonts/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
+       url("../fonts/Inter-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"),
+       url("../fonts/Inter-ExtraBold.woff") format("woff");
+}
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg {
+  vertical-align: middle
+}
+svg {
+  fill: currentColor;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(36, 44, 65, .65) 0%, rgba(36, 44, 65, .95) 100%);
+}
+
+/* .swiper-pagination-bullet {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 0 !important;
+  background: config('colors.gray') !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: config('colors.blue') !important;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  display: flex;
+  bottom: auto !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 .5rem !important;
+} */
+
+.bg-white-silver {
+  background: linear-gradient(to bottom, config('colors.white') 35%, config('colors.silver') 0%);
+}
+
+.swiper-case-studies-pagination {
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+.swiper-case-studies-pagination > .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid config('colors.slate');
+  width: .5rem;
+  height: .5rem;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  opacity: 1 !important;
+}
+.swiper-case-studies-pagination > .swiper-pagination-bullet-active {
+  background-color: config('colors.slate');
+}
